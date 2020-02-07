@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>nestedTimeout</title>
+  </head>
+  <body>
+    <button>Click me!</button>
+  </body>
+  <script>
+    const startTime = Date.now();
+
+    console.log(`Script start: ${Date.now() - startTime}`);
+
+    setTimeout(() => {
+      setTimeout(() => {
+        console.log(`Nested Timeout: ${Date.now() - startTime}`);
+      }, 3000);
+      console.log(`Regular Timeout: ${Date.now() - startTime}`);
+    }, 5000);
+
+    console.log(`Script end: ${Date.now() - startTime}`);
+  </script>
+</html>

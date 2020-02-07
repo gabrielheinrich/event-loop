@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>sharedState</title>
+  </head>
+  <body>
+    <button>Click me!</button>
+  </body>
+  <script>
+    let counter = 0;
+
+    console.log(`Startup counter = ${counter}`);
+
+    setTimeout(() => {
+      console.log(`Timeout counter = ${counter}`);
+    }, 5000);
+
+    document.querySelector("button").addEventListener("click", () => {
+      // console.log(`Click! counter = ${counter}`);
+      counter += 1;
+    });
+
+    counter += 1;
+  </script>
+</html>

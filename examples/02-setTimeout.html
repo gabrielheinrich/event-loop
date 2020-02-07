@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>setTimeout</title>
+  </head>
+  <body>
+    <button>Click me!</button>
+  </body>
+  <script>
+    const startTime = Date.now();
+
+    console.log(`Line 15: ${Date.now() - startTime}`);
+
+    setTimeout(() => {
+      console.log(`Line 18: ${Date.now() - startTime}`);
+    }, 5000);
+
+    console.log(`Line 21: ${Date.now() - startTime}`);
+  </script>
+</html>
